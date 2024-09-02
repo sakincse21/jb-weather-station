@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import Weather from './components/Weather/Weather';
+
+
 
 function App() {
+  const [btnClick, setBtnClick] = useState(false);
+  const [weatherInfo, setWeatherInfo] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="outerDiv">
+      <div className='innerDiv'>
+        {
+          btnClick?<></>:<Header value={[weatherInfo, setWeatherInfo]} setBtnClick={setBtnClick} ></Header>
+        }
+        <Weather value={[weatherInfo, setWeatherInfo]} setBtnClick={setBtnClick} btnClick={btnClick}></Weather>
+      </div>
     </div>
   );
 }

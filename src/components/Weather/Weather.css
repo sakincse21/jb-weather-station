@@ -1,0 +1,21 @@
+.outerBox{
+    border: 5px solid black;
+    border-radius: 12px;
+}
+h4{
+    text-align: center;
+}
+.col-sm-5{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.mainInfo{
+    border: 3px solid black;
+    border-radius: 8px;
+}
+img{
+    filter: drop-shadow(2px 2px 3px gray);
+}
+.specialDiv{
+    box-shadow: 3px 3px 4px gray;
+}

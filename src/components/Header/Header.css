@@ -1,0 +1,20 @@
+.header{
+    
+}
+.header h1{
+    font-size: 60px;
+    font-weight: 800;
+}
+.search-box input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+.search-box button{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    background-color: rgb(88, 136, 120);
+}
