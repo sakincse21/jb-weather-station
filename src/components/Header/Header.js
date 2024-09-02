@@ -3,11 +3,10 @@ import React, { useState } from 'react';
 import './Header.css';
 
 const Header = (props) => {
-    const [weatherInfo, setWeatherInfo] = props.value;
+    const setWeatherInfo = props.setWeatherInfo;
     const setBtnClick = props.setBtnClick;
     const apiKey = process.env.REACT_APP_API_KEY;
     const [city, setCity] = useState('');
-    console.log(weatherInfo);
 
     const handleCity = (e) => {
         setCity(e.target.value.toLowerCase());
@@ -22,7 +21,7 @@ const Header = (props) => {
                     .then(resp => resp.json())
                     .then(data => {
                         setWeatherInfo(data);
-                        console.log(data);
+                        // console.log(data);
                         setBtnClick(true);
                         //sessionStorage.setItem(city, JSON.stringify(weatherInfo));
                     });

@@ -1,6 +1,7 @@
 .outerBox{
     border: 5px solid black;
     border-radius: 12px;
+    background-color: rgb(243, 243, 243);
 }
 h4{
     text-align: center;
@@ -18,4 +19,15 @@ img{
 }
 .specialDiv{
     box-shadow: 3px 3px 4px gray;
+    background-color: beige;
+}
+.specialDiv:hover{
+    box-shadow: 6px 6px 8px gray;
+}
+.myBtn{
+    border: 2px solid black;
+    border-radius: 6px;
+}
+.myBtn:hover{
+    box-shadow: 2px 2px 2px gray;
 }

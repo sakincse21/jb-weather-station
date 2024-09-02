@@ -12,10 +12,10 @@ const Weather = (props) => {
     return (
         (btnClick) === true ?
             (
-                < div className='my-5 mx-auto text-center outerBox row d-flex p-3 gap-2 justify-content-center align-items-center' >
+                < div className='my-5 mx-auto text-center outerBox row d-flex p-3 gap-2 gap-md-3 justify-content-center align-items-center' >
                     <div className="mainInfo specialDiv col-12 row d-flex justify-content-center align-items-center">
                         <div className="col-6 d-flex flex-column justify-content-center align-items-center ">
-                            <img src={`http://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@4x.png`} alt="info" width={'120px'} />
+                            <img src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@4x.png`} alt="info" width={'120px'} />
                             <h3>{weatherInfo.weather[0].main}</h3>
                             {/* <p>{sunrise}</p> */}
                         </div>
@@ -49,7 +49,7 @@ const Weather = (props) => {
                         <h5 className='fw-bold'>{weatherInfo.main.pressure} hPa</h5>
                     </div>
                     <div className="col-12">
-                        <button className='btn btn-danger specialDiv' onClick={() => { setBtnClick(false) }}>Reset</button>
+                        <button className='myBtn specialDiv fw-bold py-2 px-md-5 px-auto' onClick={() => { setBtnClick(false) }}>Reset</button>
                     </div>
                 </div >
             ) : (

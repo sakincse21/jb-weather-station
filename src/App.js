@@ -12,7 +12,7 @@ function App() {
     <div className="outerDiv">
       <div className='innerDiv'>
         {
-          btnClick?<></>:<Header value={[weatherInfo, setWeatherInfo]} setBtnClick={setBtnClick} ></Header>
+          btnClick?<></>:<Header setWeatherInfo={setWeatherInfo} setBtnClick={setBtnClick} ></Header>
         }
         <Weather value={[weatherInfo, setWeatherInfo]} setBtnClick={setBtnClick} btnClick={btnClick}></Weather>
       </div>
