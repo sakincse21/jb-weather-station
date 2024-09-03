@@ -12,16 +12,16 @@
 }
 @media (min-width: 360px) {
     .innerDiv{
-        width: 60vw;
+        width: 70vw;
     }
 }
 @media (min-width: 768px) {
     .innerDiv{
-        width: 50vw;
+        width: 60vw;
     }
 }
 @media (min-width: 968px) {
     .innerDiv{
-        width: 40vw;
+        width: 45vw;
     }
 }

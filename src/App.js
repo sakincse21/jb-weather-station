@@ -8,13 +8,14 @@ import Weather from './components/Weather/Weather';
 function App() {
   const [btnClick, setBtnClick] = useState(false);
   const [weatherInfo, setWeatherInfo] = useState({});
+  const [forecast, setForecast] = useState([]);
   return (
     <div className="outerDiv">
       <div className='innerDiv'>
         {
-          btnClick?<></>:<Header setWeatherInfo={setWeatherInfo} setBtnClick={setBtnClick} ></Header>
+          btnClick?<></>:<Header setWeatherInfo={setWeatherInfo} setBtnClick={setBtnClick} setForecast={setForecast} ></Header>
         }
-        <Weather value={[weatherInfo, setWeatherInfo]} setBtnClick={setBtnClick} btnClick={btnClick}></Weather>
+        <Weather value={[weatherInfo, setWeatherInfo]} forecast={forecast} setBtnClick={setBtnClick} btnClick={btnClick}></Weather>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import './Header.css';
 
 const Header = (props) => {
     const setWeatherInfo = props.setWeatherInfo;
+    const setForecast=props.setForecast;
     const setBtnClick = props.setBtnClick;
     const apiKey = process.env.REACT_APP_API_KEY;
     const [city, setCity] = useState('');
@@ -21,10 +22,27 @@ const Header = (props) => {
                     .then(resp => resp.json())
                     .then(data => {
                         setWeatherInfo(data);
-                        // console.log(data);
+                        console.log(data);
                         setBtnClick(true);
                         //sessionStorage.setItem(city, JSON.stringify(weatherInfo));
                     });
+                fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&units=metric&appid=${apiKey}`)
+                .then(res=>res.json())
+                .then(data=>{
+                    const newData=data.list.slice(0,6);
+                    let tempForecast=[];
+                    newData.map(ti=>{
+                        const info={
+                            time: `${ti.dt_txt.slice(11,15)}`,
+                            temp: `${parseFloat(ti.main.temp)}`
+                        }
+                        tempForecast.push(info);
+                    })
+                    setForecast(tempForecast);
+                    console.log(tempForecast);
+                    
+                });
+                
             })
     }
     return (
